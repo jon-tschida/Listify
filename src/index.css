@@ -55,6 +55,7 @@ body {
   color: black;
   align-items: center;
   padding: 10px;
+  user-select: none;
 }
 
 .add-subtract > p {
@@ -94,6 +95,55 @@ body {
   box-shadow: 0px 0px 10px black;
   border-radius: var(--boxes-border-radius);
   background-color: rgb(216, 216, 216);
+}
+
+.add-meal-modol {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: rgb(216, 216, 216);
+  z-index: 100;
+
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.add-meal-form {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.Add-meal-form-input {
+  text-align: center;
+  border-radius: 5px;
+  width: 70%;
+  height: 35px;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.meal-section {
+  width: 80%;
+  height: 80%;
+  border: black solid;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 15px;
+  box-shadow: 0px 0px 5px black;
+  background-color: white;
+  color: black;
+}
+
+.meal-section > h1 {
+  text-align: center;
 }
 
 /* ========= */

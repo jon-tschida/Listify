@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 
-export default function GroceryList() {
+export default function GroceryList(props) {
   return (
     <div className="grocery-list">
       <Header content={"grocery list"} css={"boxes-header"} />
