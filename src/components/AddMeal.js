@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function AddMeal(props) {
-  function handleChange(event) {
+  const [mealTitle, setMealTitle] = React.useState("");
+  const [clicked, setClicked] = React.useState(false);
+
+  React.useEffect(() => {
+    if (props.formData.text.length > 0) setMealTitle(props.formData.text);
+    props.setFormData({ text: "" });
+  }, [clicked]);
+
+  const handleClick = () => {
+    setClicked((prevState) => !prevState);
+  };
+
+  const handleChange = (event) => {
     const { name, value } = event.target;
 
     props.setFormData((prevFormData) => {
@@ -10,7 +22,8 @@ export default function AddMeal(props) {
         [name]: value,
       };
     });
-  }
+  };
+  console.log(props.formData.text.length);
 
   return (
     <>
@@ -23,11 +36,17 @@ export default function AddMeal(props) {
           value={props.formData.text}
           onChange={handleChange}
         />
-        <span className="material-symbols-outlined plus-sign">add</span>
+        <span
+          className="material-symbols-outlined plus-sign"
+          onClick={handleClick}
+        >
+          add
+        </span>
       </form>
+
       <div className="add-meal-modol">
         <div className="meal-section">
-          <h1>{props.formData.text}</h1>
+          <h1>{mealTitle}</h1>
           <hr />
         </div>
       </div>
