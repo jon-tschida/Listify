@@ -13,10 +13,15 @@ export default function App() {
     ingredients: "",
   });
 
+  // remove Ingredients from the addMeal Modal when the Modal is closed
+  React.useEffect(() => {
+    setIngredients([]);
+  }, [isAddMealsOpen]);
+
   return (
     <div className="area">
       <div>
-        <Header content={"Lst."} css={"main-header"} />
+        <Header content={"List."} css={"main-header"} />
       </div>
 
       <div className="main">

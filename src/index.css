@@ -13,6 +13,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  /* font-family: "Roboto", sans-serif; */
   color: rgb(192, 192, 192);
   user-select: none;
 }
@@ -171,6 +172,37 @@ body {
 .remove-ingredient:hover {
   transition: transform 200ms ease-in-out;
   transform: scale(1.2, 1.2);
+}
+
+.add-meal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  z-index: 100;
+  text-align: center;
+  padding: 15px;
+}
+
+.created-meals-list-container {
+  margin: auto;
+  border: rgba(0, 0, 0, 0.2) solid;
+  border-radius: 10px;
+  width: 90%;
+  height: 70%;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.created-grocery-list-container {
+  margin: auto;
+  margin-top: 4rem;
+  border: rgba(0, 0, 0, 0.2) solid;
+  border-radius: 10px;
+  width: 90%;
+  height: 70%;
+  overflow-y: auto;
+  padding: 15px;
 }
 
 /* ========= */

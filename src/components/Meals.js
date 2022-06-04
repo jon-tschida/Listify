@@ -15,6 +15,7 @@ export default function Meals(props) {
           {props.isAddMealsOpen ? `remove` : `add_circle`}
         </span>
       </div>
+      <div className="created-meals-list-container"></div>
     </div>
   );
 }

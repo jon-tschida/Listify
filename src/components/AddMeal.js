@@ -15,8 +15,9 @@ export default function AddMeal(props) {
     props.setFormData({ text: "", ingredients: "" });
   }, [clicked]);
 
-  const handleClick = () => {
+  const handleClick = (e) => {
     setClicked((prevState) => !prevState);
+    handleSubmit(e);
   };
 
   const handleChange = (event) => {
@@ -39,7 +40,7 @@ export default function AddMeal(props) {
   const handleSubmit = (e) => e.preventDefault();
   return (
     <>
-      <form className="add-meal-form" onSubmit={handleSubmit}>
+      <form className="add-meal-form" onSubmit={handleClick}>
         {mealTitle.length === 0 ? (
           <input
             type="text"
@@ -86,6 +87,13 @@ export default function AddMeal(props) {
               </ul>
             ))}
           </div>
+        </div>
+        <div className="add-meal">
+          <h3>Add Meal</h3>
+          {""}
+          <span className="material-symbols-outlined plus-sign">
+            add_circle
+          </span>
         </div>
       </div>
     </>
