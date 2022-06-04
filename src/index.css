@@ -14,6 +14,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(192, 192, 192);
+  user-select: none;
 }
 
 .main-header {
@@ -64,8 +65,6 @@ body {
 }
 .plus-sign {
   font-size: 30px;
-  border: black solid;
-  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -144,6 +143,34 @@ body {
 
 .meal-section > h1 {
   text-align: center;
+}
+.ingredients-list-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 80%;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+.ingredients-list {
+  color: black;
+  font-size: 20px;
+}
+
+.ingredients-list > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.remove-ingredient {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+}
+.remove-ingredient:hover {
+  transition: transform 200ms ease-in-out;
+  transform: scale(1.2, 1.2);
 }
 
 /* ========= */

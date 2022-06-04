@@ -6,9 +6,11 @@ import AddMeal from "./components/AddMeal";
 
 export default function App() {
   const [isAddMealsOpen, setIsAddMealsOpen] = React.useState(false);
+  const [ingredients, setIngredients] = React.useState([]);
 
   const [formData, setFormData] = React.useState({
     text: "",
+    ingredients: "",
   });
 
   return (
@@ -18,9 +20,17 @@ export default function App() {
       </div>
 
       <div className="main">
-        <Meals setIsAddMealsOpen={setIsAddMealsOpen} />
+        <Meals
+          setIsAddMealsOpen={setIsAddMealsOpen}
+          isAddMealsOpen={isAddMealsOpen}
+        />
         {isAddMealsOpen && (
-          <AddMeal formData={formData} setFormData={setFormData} />
+          <AddMeal
+            formData={formData}
+            setFormData={setFormData}
+            ingredients={ingredients}
+            setIngredients={setIngredients}
+          />
         )}
         <GroceryList />
       </div>

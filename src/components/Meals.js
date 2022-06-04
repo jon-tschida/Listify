@@ -12,7 +12,7 @@ export default function Meals(props) {
           className="material-symbols-outlined plus-sign"
           onClick={handleClick}
         >
-          add
+          {props.isAddMealsOpen ? `remove` : `add_circle`}
         </span>
       </div>
     </div>
