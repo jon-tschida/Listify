@@ -218,6 +218,13 @@ hr {
 
   scroll-snap-align: start;
   cursor: pointer;
+
+  transition: transform 250ms ease-in-out;
+}
+
+.created-meals:hover {
+  transform: scale(1.02, 1.02);
+  transition: transform 250ms ease-in-out;
 }
 .created-meals > ul {
   list-style: none;
@@ -248,9 +255,6 @@ hr {
 }
 .cap {
   text-transform: capitalize;
-}
-.test {
-  text-decoration: line-through;
 }
 
 /* ========= */

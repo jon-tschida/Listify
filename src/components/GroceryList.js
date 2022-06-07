@@ -2,7 +2,11 @@ import React from "react";
 import Header from "./Header";
 
 export default function GroceryList(props) {
-  const [strikeThroughItem, setStrikeThroughItem] = React.useState(false);
+  const handleDelete = (index) => {
+    props.setTotalGroceryList((prevList) =>
+      prevList.filter((_, i) => i !== index)
+    );
+  };
 
   return (
     <>
@@ -19,16 +23,15 @@ export default function GroceryList(props) {
             {props.totalGroceryList.map((item, index) => {
               return (
                 <ul key={index} className="ingredients-list cap">
-                  {item.map((list, i) => {
-                    return (
-                      <li key={i}>
-                        {list}
-                        <span className="material-symbols-outlined remove-ingredient">
-                          delete
-                        </span>
-                      </li>
-                    );
-                  })}
+                  <li key={index}>
+                    {item}{" "}
+                    <span
+                      className="material-symbols-outlined remove-ingredient"
+                      onClick={() => handleDelete(index)}
+                    >
+                      delete
+                    </span>
+                  </li>
                 </ul>
               );
             })}

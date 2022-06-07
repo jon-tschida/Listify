@@ -5,11 +5,9 @@ export default function Meals(props) {
   const handleClick = () => props.setIsAddMealsOpen((prevState) => !prevState);
 
   const handleMealClick = (index) => {
-    console.log(`clicked`);
-    props.setTotalGroceryList((prevList) => [
-      ...prevList,
-      props.createdMeals[index].ingredients,
-    ]);
+    props.setTotalGroceryList((prevList) =>
+      [...prevList, props.createdMeals[index].ingredients].flat(2)
+    );
   };
   return (
     <div className="meals">

@@ -47,7 +47,10 @@ export default function App() {
             setCreatedMeals={setCreatedMeals}
           />
         )}
-        <GroceryList totalGroceryList={totalGroceryList} />
+        <GroceryList
+          totalGroceryList={totalGroceryList}
+          setTotalGroceryList={setTotalGroceryList}
+        />
       </div>
       {/* Needed for animation  */}
       <ul className="circles">
