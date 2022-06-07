@@ -9,6 +9,7 @@ export default function App() {
   const [ingredients, setIngredients] = React.useState([]);
   const [mealTitle, setMealTitle] = React.useState("");
   const [createdMeals, setCreatedMeals] = React.useState([]);
+  const [totalGroceryList, setTotalGroceryList] = React.useState([]);
 
   const [formData, setFormData] = React.useState({
     text: "",
@@ -33,6 +34,7 @@ export default function App() {
           isAddMealsOpen={isAddMealsOpen}
           createdMeals={createdMeals}
           setCreatedMeals={setCreatedMeals}
+          setTotalGroceryList={setTotalGroceryList}
         />
         {isAddMealsOpen && (
           <AddMeal
@@ -45,7 +47,7 @@ export default function App() {
             setCreatedMeals={setCreatedMeals}
           />
         )}
-        <GroceryList />
+        <GroceryList totalGroceryList={totalGroceryList} />
       </div>
       {/* Needed for animation  */}
       <ul className="circles">

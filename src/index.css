@@ -217,21 +217,40 @@ hr {
   overflow-y: auto;
 
   scroll-snap-align: start;
+  cursor: pointer;
 }
 .created-meals > ul {
   list-style: none;
   padding: 1px;
+  font-size: 30px;
 }
 
 .created-grocery-list-container {
   margin: auto;
-  margin-top: 4rem;
   border: rgba(0, 0, 0, 0.2) solid;
   border-radius: 10px;
   width: 90%;
   height: 70%;
   overflow-y: auto;
   padding: 15px;
+  font-size: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.created-grocery-list {
+  color: black;
+  text-align: center;
+}
+.created-grocery-list > ul {
+  padding: 2px;
+  list-style: none;
+}
+.cap {
+  text-transform: capitalize;
+}
+.test {
+  text-decoration: line-through;
 }
 
 /* ========= */

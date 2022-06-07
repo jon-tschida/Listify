@@ -3,6 +3,14 @@ import Header from "./Header";
 
 export default function Meals(props) {
   const handleClick = () => props.setIsAddMealsOpen((prevState) => !prevState);
+
+  const handleMealClick = (index) => {
+    console.log(`clicked`);
+    props.setTotalGroceryList((prevList) => [
+      ...prevList,
+      props.createdMeals[index].ingredients,
+    ]);
+  };
   return (
     <div className="meals">
       <Header content={"meals"} css={"boxes-header"} />
@@ -17,10 +25,14 @@ export default function Meals(props) {
       </div>
 
       <div className="created-meals-list-container">
-        {props.createdMeals.map((el) => {
+        {props.createdMeals.map((el, i) => {
           return (
-            <div className="created-meals">
-              <h3>{el.mealTitle}</h3>
+            <div
+              className="created-meals"
+              onClick={() => handleMealClick(i)}
+              key={i}
+            >
+              <h1>{el.mealTitle}</h1>
               <hr />
               {el.ingredients.map((ingredient, index) => {
                 return (
