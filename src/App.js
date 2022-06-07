@@ -16,6 +16,10 @@ export default function App() {
     ingredients: "",
   });
 
+  const [newItemForm, setNewItemForm] = React.useState({
+    newItem: "",
+  });
+
   // remove Ingredients from the addMeal Modal when the Modal is closed
   React.useEffect(() => {
     setIngredients([]);
@@ -25,7 +29,7 @@ export default function App() {
   return (
     <div className="area">
       <div>
-        <Header content={"List."} css={"main-header"} />
+        <Header content={"Listify"} css={"main-header"} />
       </div>
 
       <div className="main">
@@ -50,6 +54,8 @@ export default function App() {
         <GroceryList
           totalGroceryList={totalGroceryList}
           setTotalGroceryList={setTotalGroceryList}
+          newItemForm={newItemForm}
+          setNewItemForm={setNewItemForm}
         />
       </div>
       {/* Needed for animation  */}

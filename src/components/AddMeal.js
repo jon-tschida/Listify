@@ -76,7 +76,7 @@ export default function AddMeal(props) {
       <div className="add-meal-modol">
         <div className="meal-section">
           <h1>{props.mealTitle}</h1>
-          <hr />
+          {props.mealTitle && <hr />}
           <div className="ingredients-list-container">
             {props.ingredients.map((ingredient, index) => (
               <ul key={index} className="ingredients-list">

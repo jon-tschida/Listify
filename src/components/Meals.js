@@ -11,7 +11,7 @@ export default function Meals(props) {
   };
   return (
     <div className="meals">
-      <Header content={"meals"} css={"boxes-header"} />
+      <Header content={"Meals"} css={"boxes-header"} />
       <div className="add-subtract">
         <p>Add a meal </p>
         <span
