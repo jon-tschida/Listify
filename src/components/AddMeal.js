@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 export default function AddMeal(props) {
-  const [mealTitle, setMealTitle] = React.useState("");
-  // const [ingredients, setIngredients] = React.useState([]);
   const [clicked, setClicked] = React.useState(false);
 
   React.useEffect(() => {
-    if (props.formData.text.length > 0) setMealTitle(props.formData.text);
+    if (props.formData.text.length > 0) props.setMealTitle(props.formData.text);
     if (props.formData.ingredients.length > 0)
       props.setIngredients((prevIngredients) => [
         ...prevIngredients,
@@ -37,11 +35,18 @@ export default function AddMeal(props) {
     );
   };
 
+  const handleAddMeal = () => {
+    props.setCreatedMeals((prevCreatedMeal) => [
+      ...prevCreatedMeal,
+      { mealTitle: props.mealTitle, ingredients: props.ingredients },
+    ]);
+  };
+
   const handleSubmit = (e) => e.preventDefault();
   return (
     <>
       <form className="add-meal-form" onSubmit={handleClick}>
-        {mealTitle.length === 0 ? (
+        {props.mealTitle.length === 0 ? (
           <input
             type="text"
             placeholder="Enter Meal Name"
@@ -70,7 +75,7 @@ export default function AddMeal(props) {
 
       <div className="add-meal-modol">
         <div className="meal-section">
-          <h1>{mealTitle}</h1>
+          <h1>{props.mealTitle}</h1>
           <hr />
           <div className="ingredients-list-container">
             {props.ingredients.map((ingredient, index) => (
@@ -91,7 +96,10 @@ export default function AddMeal(props) {
         <div className="add-meal">
           <h3>Add Meal</h3>
           {""}
-          <span className="material-symbols-outlined plus-sign">
+          <span
+            className="material-symbols-outlined plus-sign"
+            onClick={handleAddMeal}
+          >
             add_circle
           </span>
         </div>

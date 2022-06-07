@@ -7,6 +7,8 @@ import AddMeal from "./components/AddMeal";
 export default function App() {
   const [isAddMealsOpen, setIsAddMealsOpen] = React.useState(false);
   const [ingredients, setIngredients] = React.useState([]);
+  const [mealTitle, setMealTitle] = React.useState("");
+  const [createdMeals, setCreatedMeals] = React.useState([]);
 
   const [formData, setFormData] = React.useState({
     text: "",
@@ -16,7 +18,8 @@ export default function App() {
   // remove Ingredients from the addMeal Modal when the Modal is closed
   React.useEffect(() => {
     setIngredients([]);
-  }, [isAddMealsOpen]);
+    setMealTitle(``);
+  }, [isAddMealsOpen, createdMeals]);
 
   return (
     <div className="area">
@@ -28,6 +31,8 @@ export default function App() {
         <Meals
           setIsAddMealsOpen={setIsAddMealsOpen}
           isAddMealsOpen={isAddMealsOpen}
+          createdMeals={createdMeals}
+          setCreatedMeals={setCreatedMeals}
         />
         {isAddMealsOpen && (
           <AddMeal
@@ -35,6 +40,9 @@ export default function App() {
             setFormData={setFormData}
             ingredients={ingredients}
             setIngredients={setIngredients}
+            mealTitle={mealTitle}
+            setMealTitle={setMealTitle}
+            setCreatedMeals={setCreatedMeals}
           />
         )}
         <GroceryList />

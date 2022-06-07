@@ -15,7 +15,24 @@ export default function Meals(props) {
           {props.isAddMealsOpen ? `remove` : `add_circle`}
         </span>
       </div>
-      <div className="created-meals-list-container"></div>
+
+      <div className="created-meals-list-container">
+        {props.createdMeals.map((el) => {
+          return (
+            <div className="created-meals">
+              <h3>{el.mealTitle}</h3>
+              <hr />
+              {el.ingredients.map((ingredient, index) => {
+                return (
+                  <ul key={index}>
+                    <li>{ingredient}</li>
+                  </ul>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
