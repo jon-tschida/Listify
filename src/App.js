@@ -8,7 +8,12 @@ export default function App() {
   const [isAddMealsOpen, setIsAddMealsOpen] = React.useState(false);
   const [ingredients, setIngredients] = React.useState([]);
   const [mealTitle, setMealTitle] = React.useState("");
-  const [createdMeals, setCreatedMeals] = React.useState([]);
+
+  const [createdMeals, setCreatedMeals] = React.useState(() => {
+    let init = JSON.parse(localStorage.getItem("createdMeals"));
+    return init || [];
+  });
+
   const [totalGroceryList, setTotalGroceryList] = React.useState(() => {
     let init = localStorage.getItem(`totalGroceryList`).split(",");
     return init[0] === "" ? [] : init;
@@ -27,7 +32,7 @@ export default function App() {
   // saving state to local storage
 
   React.useEffect(() => {
-    localStorage.setItem(`createdMeals`, createdMeals);
+    localStorage.setItem(`createdMeals`, JSON.stringify(createdMeals));
   }, [createdMeals]);
 
   React.useEffect(() => {
