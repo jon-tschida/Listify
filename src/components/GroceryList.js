@@ -23,10 +23,12 @@ export default function GroceryList(props) {
 
   const handleNewItem = (e) => {
     e.preventDefault();
-    props.setTotalGroceryList((prevList) => [
-      ...prevList,
-      props.newItemForm.newItem,
-    ]);
+
+    if (props.newItemForm.newItem)
+      props.setTotalGroceryList((prevList) => [
+        ...prevList,
+        props.newItemForm.newItem,
+      ]);
   };
 
   const handleEnableAddItem = () => setOpenAddAnItem((prevState) => !prevState);

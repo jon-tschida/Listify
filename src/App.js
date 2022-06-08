@@ -9,7 +9,10 @@ export default function App() {
   const [ingredients, setIngredients] = React.useState([]);
   const [mealTitle, setMealTitle] = React.useState("");
   const [createdMeals, setCreatedMeals] = React.useState([]);
-  const [totalGroceryList, setTotalGroceryList] = React.useState([]);
+  const [totalGroceryList, setTotalGroceryList] = React.useState(() => {
+    let init = localStorage.getItem(`totalGroceryList`).split(",");
+    return init[0] === "" ? [] : init;
+  });
 
   const [formData, setFormData] = React.useState({
     text: "",
@@ -29,9 +32,7 @@ export default function App() {
 
   React.useEffect(() => {
     localStorage.setItem(`totalGroceryList`, totalGroceryList);
-    console.log(`grocery list UE ran`);
   }, [totalGroceryList]);
-
   //=============================
 
   // remove Ingredients from the addMeal Modal when the Modal is closed
