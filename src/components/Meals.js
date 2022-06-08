@@ -2,13 +2,23 @@ import React from "react";
 import Header from "./Header";
 
 export default function Meals(props) {
+  const [isDeleting, setIsDeleting] = React.useState(false);
+
   const handleClick = () => props.setIsAddMealsOpen((prevState) => !prevState);
 
   const handleMealClick = (index) => {
-    props.setTotalGroceryList((prevList) =>
-      [...prevList, props.createdMeals[index].ingredients].flat(2)
-    );
+    if (isDeleting === false) {
+      props.setTotalGroceryList((prevList) =>
+        [...prevList, props.createdMeals[index].ingredients].flat(2)
+      );
+    }
   };
+
+  const handleMealDelete = (index) => {
+    console.log(index);
+    props.setCreatedMeals((prevMeal) => prevMeal.filter((_, i) => i !== index));
+  };
+
   return (
     <div className="meals">
       <Header content={"Meals"} css={"boxes-header"} />
@@ -30,12 +40,22 @@ export default function Meals(props) {
               onClick={() => handleMealClick(i)}
               key={i}
             >
-              <h1>{el.mealTitle}</h1>
+              <h1>
+                {el.mealTitle}
+                <span
+                  className="material-symbols-outlined remove-ingredient"
+                  onClick={() => handleMealDelete(i)}
+                  onMouseEnter={() => setIsDeleting(true)}
+                  onMouseLeave={() => setIsDeleting(false)}
+                >
+                  delete
+                </span>
+              </h1>
               <hr />
               {el.ingredients.map((ingredient, index) => {
                 return (
                   <ul key={index}>
-                    <li>{ingredient}</li>
+                    <li className="cap">{ingredient}</li>
                   </ul>
                 );
               })}

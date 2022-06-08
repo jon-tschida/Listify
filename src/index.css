@@ -208,6 +208,7 @@ hr {
 .created-meals {
   flex-shrink: 0;
   border: black solid;
+  background-color: white;
   height: 250px;
   width: 300px;
   text-align: center;
@@ -230,6 +231,10 @@ hr {
   list-style: none;
   padding: 1px;
   font-size: 30px;
+}
+
+.cap {
+  text-transform: capitalize;
 }
 
 .created-grocery-list-container {

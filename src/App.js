@@ -20,6 +20,20 @@ export default function App() {
     newItem: "",
   });
 
+  //============================
+  // saving state to local storage
+
+  React.useEffect(() => {
+    localStorage.setItem(`createdMeals`, createdMeals);
+  }, [createdMeals]);
+
+  React.useEffect(() => {
+    localStorage.setItem(`totalGroceryList`, totalGroceryList);
+    console.log(`grocery list UE ran`);
+  }, [totalGroceryList]);
+
+  //=============================
+
   // remove Ingredients from the addMeal Modal when the Modal is closed
   React.useEffect(() => {
     setIngredients([]);
