@@ -11,11 +11,10 @@ export default function Meals(props) {
       props.setTotalGroceryList((prevList) =>
         [...prevList, props.createdMeals[index].ingredients].flat(2)
       );
-    }
+    } else if (isDeleting === true) setIsDeleting(false);
   };
 
   const handleMealDelete = (index) => {
-    console.log(index);
     props.setCreatedMeals((prevMeal) => prevMeal.filter((_, i) => i !== index));
   };
 
