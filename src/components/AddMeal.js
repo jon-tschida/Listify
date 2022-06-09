@@ -78,7 +78,7 @@ export default function AddMeal(props) {
 
       <div className="add-meal-modol">
         <div className="meal-section">
-          <h1>{props.mealTitle}</h1>
+          <p>{props.mealTitle}</p>
           {props.mealTitle && <hr />}
           <div className="ingredients-list-container">
             {props.ingredients.map((ingredient, index) => (
@@ -98,7 +98,7 @@ export default function AddMeal(props) {
         </div>
         <div>
           <div className="add-meal">
-            <h3>Add Meal</h3>
+            <p>Add Meal</p>
             <span
               className="material-symbols-outlined plus-sign"
               onClick={handleAddMeal}
@@ -108,7 +108,7 @@ export default function AddMeal(props) {
           </div>
           <hr />
           <div className="add-meal-close">
-            <h3>Close Menu</h3>
+            <p>Close</p>
             <span
               className="material-symbols-outlined plus-sign"
               onClick={handleClose}

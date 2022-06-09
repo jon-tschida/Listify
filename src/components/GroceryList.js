@@ -97,7 +97,7 @@ export default function GroceryList(props) {
         </div>
         {props.totalGroceryList.length > 0 && (
           <div className="add-meal">
-            <h4>Clear List</h4>
+            <div className="clear-list">Clear</div>
             <span
               className="material-symbols-outlined remove-ingredient"
               onClick={handleClear}

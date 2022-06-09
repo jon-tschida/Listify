@@ -39,7 +39,7 @@ export default function Meals(props) {
               onClick={() => handleMealClick(i)}
               key={i}
             >
-              <h1>
+              <p>
                 {el.mealTitle}
                 <span
                   className="material-symbols-outlined remove-ingredient"
@@ -49,7 +49,7 @@ export default function Meals(props) {
                 >
                   delete
                 </span>
-              </h1>
+              </p>
               <hr />
               {el.ingredients.map((ingredient, index) => {
                 return (

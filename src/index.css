@@ -12,8 +12,8 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  /* font-family: "Roboto", sans-serif; */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: "Inter", sans-serif;
   color: rgb(192, 192, 192);
   user-select: none;
 }
@@ -72,6 +72,7 @@ hr {
 .plus-sign {
   font-size: 30px;
   cursor: pointer;
+  font-weight: 300;
 }
 
 .main {
@@ -147,17 +148,19 @@ hr {
   color: black;
 }
 
-.meal-section > h1 {
+.meal-section > p {
   text-align: center;
+  font-size: 35px;
 }
 .ingredients-list-container {
   margin: auto;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 75%;
   height: 80%;
   overflow-y: auto;
   padding-right: 10px;
+  padding-top: 10px;
 }
 .ingredients-list {
   color: black;
@@ -171,6 +174,7 @@ hr {
 }
 .remove-ingredient {
   font-size: 20px;
+  font-weight: 300;
   cursor: pointer;
   transition: transform 200ms ease-in-out;
 }
@@ -188,6 +192,11 @@ hr {
   z-index: 100;
   text-align: center;
   padding-top: 10px;
+}
+
+.add-meal > p {
+  font-weight: 300;
+  font-size: 25px;
 }
 
 .add-meal-close {
@@ -242,6 +251,12 @@ hr {
   list-style: none;
   padding: 1px;
   font-size: 30px;
+  font-weight: 300;
+}
+
+.created-meals > p {
+  font-size: 35px;
+  font-weight: 400;
 }
 
 .cap {
@@ -268,6 +283,11 @@ hr {
 .created-grocery-list > ul {
   padding: 2px;
   list-style: none;
+}
+
+.clear-list {
+  font-size: 20px;
+  font-weight: 300;
 }
 .cap {
   text-transform: capitalize;
