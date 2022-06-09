@@ -88,18 +88,18 @@ hr {
 }
 
 .meals {
-  width: var(--boxes-width);
-  height: var(--boxes-height);
+  width: 500px;
+  height: 550px;
   box-shadow: 0px 0px 10px black;
-  border-radius: var(--boxes-border-radius);
+  border-radius: 15px;
   background-color: rgb(216, 216, 216);
 }
 
 .grocery-list {
-  width: var(--boxes-width);
-  height: var(--boxes-height);
+  width: 500px;
+  height: 550px;
   box-shadow: 0px 0px 10px black;
-  border-radius: var(--boxes-border-radius);
+  border-radius: 15px;
   background-color: rgb(216, 216, 216);
 }
 
@@ -305,13 +305,11 @@ hr {
 
 /* ======= Media queries ======= */
 
-@media only screen and (min-width: 300px) {
+@media only screen and (max-width: 500px) {
   .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    /* padding: 50px; */
 
     margin-top: 5%;
     position: relative;
@@ -361,6 +359,27 @@ hr {
     font-size: 25px;
     padding-left: 50px;
     padding-right: 50px;
+  }
+  .add-meal-modol {
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    background-color: rgb(216, 216, 216);
+    z-index: 100;
+
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px black;
+  }
+
+  .add-meal-form {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
   }
 }
 
