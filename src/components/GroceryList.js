@@ -33,6 +33,8 @@ export default function GroceryList(props) {
 
   const handleEnableAddItem = () => setOpenAddAnItem((prevState) => !prevState);
 
+  const handleClear = () => props.setTotalGroceryList([]);
+
   // Clears add an item field when we add a new item via the form
   React.useEffect(() => {
     props.setNewItemForm({ newItem: "" });
@@ -92,6 +94,15 @@ export default function GroceryList(props) {
               );
             })}
           </div>
+        </div>
+        <div className="add-meal">
+          <h4>Clear List</h4>
+          <span
+            className="material-symbols-outlined remove-ingredient"
+            onClick={handleClear}
+          >
+            delete
+          </span>
         </div>
       </div>
     </>

@@ -43,6 +43,9 @@ export default function AddMeal(props) {
   };
 
   const handleSubmit = (e) => e.preventDefault();
+
+  const handleClose = () => props.setIsAddMealsOpen((prevState) => !prevState);
+
   return (
     <>
       <form className="add-meal-form" onSubmit={handleClick}>
@@ -93,15 +96,26 @@ export default function AddMeal(props) {
             ))}
           </div>
         </div>
-        <div className="add-meal">
-          <h3>Add Meal</h3>
-          {""}
-          <span
-            className="material-symbols-outlined plus-sign"
-            onClick={handleAddMeal}
-          >
-            add_circle
-          </span>
+        <div>
+          <div className="add-meal">
+            <h3>Add Meal</h3>
+            <span
+              className="material-symbols-outlined plus-sign"
+              onClick={handleAddMeal}
+            >
+              add_circle
+            </span>
+          </div>
+          <hr />
+          <div className="add-meal-close">
+            <h3>Close Menu</h3>
+            <span
+              className="material-symbols-outlined plus-sign"
+              onClick={handleClose}
+            >
+              remove
+            </span>
+          </div>
         </div>
       </div>
     </>

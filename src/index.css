@@ -183,10 +183,21 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: black;
   z-index: 100;
   text-align: center;
-  padding: 15px;
+  padding-top: 10px;
+}
+
+.add-meal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: black;
+  z-index: 100;
+  text-align: center;
 }
 
 .created-meals-list-container {

@@ -10,7 +10,10 @@ export default function App() {
   const [mealTitle, setMealTitle] = React.useState("");
 
   const [createdMeals, setCreatedMeals] = React.useState(() => {
-    let init = JSON.parse(localStorage.getItem("createdMeals"));
+    let init =
+      localStorage.getItem("createdMeals") === ""
+        ? ""
+        : JSON.parse(localStorage.getItem("createdMeals"));
     return init || [];
   });
 
@@ -69,6 +72,7 @@ export default function App() {
             mealTitle={mealTitle}
             setMealTitle={setMealTitle}
             setCreatedMeals={setCreatedMeals}
+            setIsAddMealsOpen={setIsAddMealsOpen}
           />
         )}
         <GroceryList
