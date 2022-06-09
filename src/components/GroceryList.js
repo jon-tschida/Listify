@@ -95,15 +95,17 @@ export default function GroceryList(props) {
             })}
           </div>
         </div>
-        <div className="add-meal">
-          <h4>Clear List</h4>
-          <span
-            className="material-symbols-outlined remove-ingredient"
-            onClick={handleClear}
-          >
-            delete
-          </span>
-        </div>
+        {props.totalGroceryList.length > 0 && (
+          <div className="add-meal">
+            <h4>Clear List</h4>
+            <span
+              className="material-symbols-outlined remove-ingredient"
+              onClick={handleClear}
+            >
+              delete
+            </span>
+          </div>
+        )}
       </div>
     </>
   );
