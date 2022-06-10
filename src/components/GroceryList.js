@@ -56,7 +56,7 @@ export default function GroceryList(props) {
         {/* Conditionally render the add-an-item form */}
         {openAddAnItem && (
           <div className="add-item">
-            <form className="add-meal-form" onSubmit={handleNewItem}>
+            <form className="add-item-form" onSubmit={handleNewItem}>
               {
                 <input
                   type="text"
