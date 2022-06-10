@@ -53,7 +53,6 @@ export default function GroceryList(props) {
             {openAddAnItem ? `remove_circle` : `add_circle`}
           </span>
         </div>
-        {/* Conditionally render the add-an-item form */}
         {openAddAnItem && (
           <div className="add-item">
             <form className="add-item-form" onSubmit={handleNewItem}>
