@@ -3,8 +3,10 @@ import Header from "./components/Header";
 import Meals from "./components/Meals";
 import GroceryList from "./components/GroceryList";
 import AddMeal from "./components/AddMeal";
+import HowTo from "./components/HowTo";
 
 export default function App() {
+  const [isHelpOpen, setIsHelpOpen] = React.useState(false);
   const [isAddMealsOpen, setIsAddMealsOpen] = React.useState(false);
   const [ingredients, setIngredients] = React.useState([]);
   const [mealTitle, setMealTitle] = React.useState("");
@@ -49,9 +51,16 @@ export default function App() {
     setMealTitle(``);
   }, [isAddMealsOpen, createdMeals]);
 
+  // Open help
+
+  const openHelp = () => setIsHelpOpen((prevState) => !prevState);
+
   return (
     <div className="area">
-      <span className="material-symbols-outlined question">help</span>
+      <span className="material-symbols-outlined question" onClick={openHelp}>
+        help
+      </span>
+      {isHelpOpen && <HowTo openHelp={openHelp} />}
       <div>
         <Header content={"Listify"} css={"main-header"} />
       </div>
