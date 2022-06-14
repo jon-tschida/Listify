@@ -45,6 +45,15 @@ hr {
   backdrop-filter: saturate(180%) blur(20px);
 }
 
+.question {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  z-index: 999999;
+}
+
 .boxes-header {
   top: 0px;
   height: 4rem;
@@ -335,7 +344,7 @@ hr {
 
 /* ======= Media queries ======= */
 
-@media only screen and (min-height: 700px) and (max-height: 1000px) {
+@media only screen and (min-height: 700px) and (max-height: 950px) {
   .main {
     margin-top: 0px;
     /* border: rgb(255, 0, 0) dashed; */
@@ -437,7 +446,7 @@ hr {
   }
 }
 
-@media only screen and (min-height: 300px) and (max-height: 700px) {
+@media only screen and (min-height: 300px) and (max-height: 750px) {
   .main {
     margin-top: 0px;
     /* border: rgb(255, 0, 0) dashed; */

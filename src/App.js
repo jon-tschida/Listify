@@ -51,10 +51,10 @@ export default function App() {
 
   return (
     <div className="area">
+      <span className="material-symbols-outlined question">help</span>
       <div>
         <Header content={"Listify"} css={"main-header"} />
       </div>
-
       <div className="main">
         <Meals
           setIsAddMealsOpen={setIsAddMealsOpen}

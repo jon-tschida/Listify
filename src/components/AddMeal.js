@@ -48,34 +48,6 @@ export default function AddMeal(props) {
 
   return (
     <>
-      {/* <form className="add-meal-form" onSubmit={handleClick}>
-        {props.mealTitle.length === 0 ? (
-          <input
-            type="text"
-            placeholder="Enter Meal Name"
-            className="Add-meal-form-input"
-            name="text"
-            value={props.formData.text}
-            onChange={handleChange}
-          />
-        ) : (
-          <input
-            type="text"
-            placeholder="Enter Ingredient"
-            className="Add-meal-form-input"
-            name="ingredients"
-            value={props.formData.ingredients}
-            onChange={handleChange}
-          />
-        )}
-        <span
-          className="material-symbols-outlined plus-sign"
-          onClick={handleClick}
-        >
-          add_circle
-        </span>
-      </form> */}
-
       <div className="add-meal-modol">
         <form className="add-meal-form" onSubmit={handleClick}>
           {props.mealTitle.length === 0 ? (

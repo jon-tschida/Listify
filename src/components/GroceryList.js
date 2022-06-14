@@ -53,28 +53,6 @@ export default function GroceryList(props) {
             {openAddAnItem ? `remove_circle` : `add_circle`}
           </span>
         </div>
-        {/* {openAddAnItem && (
-          <div className="add-item">
-            <form className="add-item-form" onSubmit={handleNewItem}>
-              {
-                <input
-                  type="text"
-                  placeholder="Enter Item"
-                  className="Add-meal-form-input"
-                  name="newItem"
-                  value={props.newItemForm.newItem}
-                  onChange={handleChange}
-                />
-              }
-              <span
-                className="material-symbols-outlined plus-sign"
-                onClick={handleNewItem}
-              >
-                add_circle
-              </span>
-            </form>
-          </div>
-        )} */}
         <div className="created-grocery-list-container">
           {openAddAnItem && (
             <div className="add-item">
