@@ -34,26 +34,29 @@ hr {
   text-align: center;
   padding: 15px;
 }
+
 .close {
   cursor: pointer;
   transition: transform 200ms ease-in-out;
 }
+
 .close:hover {
   transform: scale(1.3, 1.3);
   transition: transform 200ms ease-in-out;
 }
-.howTo > span {
+
+.howTo>span {
   position: absolute;
   top: 15px;
   right: 15px;
 }
 
-.howTo > hr {
+.howTo>hr {
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-.howTo > p {
+.howTo>p {
   margin: auto;
   font-size: 20px;
   width: 70%;
@@ -112,10 +115,11 @@ hr {
   user-select: none;
 }
 
-.add-subtract > p {
+.add-subtract>p {
   font-size: 25px;
   padding: 5px;
 }
+
 .plus-sign {
   font-size: 30px;
   cursor: pointer;
@@ -198,10 +202,11 @@ hr {
   color: black;
 }
 
-.meal-section > p {
+.meal-section>p {
   text-align: center;
   font-size: 35px;
 }
+
 .ingredients-list-container {
   margin: auto;
   display: flex;
@@ -212,22 +217,25 @@ hr {
   padding-right: 10px;
   padding-top: 10px;
 }
+
 .ingredients-list {
   color: black;
   font-size: 20px;
 }
 
-.ingredients-list > li {
+.ingredients-list>li {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .remove-ingredient {
   font-size: 20px;
   font-weight: 300;
   cursor: pointer;
   transition: transform 200ms ease-in-out;
 }
+
 .remove-ingredient:hover {
   transition: transform 200ms ease-in-out;
   transform: scale(1.2, 1.2);
@@ -238,7 +246,7 @@ hr {
   flex-direction: column;
 }
 
-.test > span {
+.test>span {
   text-align: center;
 }
 
@@ -253,7 +261,7 @@ hr {
   padding-top: 10px;
 }
 
-.add-meal > p {
+.add-meal>p {
   font-weight: 300;
   font-size: 25px;
 }
@@ -306,14 +314,15 @@ hr {
   transform: scale(1.02, 1.02);
   transition: transform 250ms ease-in-out;
 }
-.created-meals > ul {
+
+.created-meals>ul {
   list-style: none;
   padding: 1px;
   font-size: 30px;
   font-weight: 300;
 }
 
-.created-meals > p {
+.created-meals>p {
   font-size: 35px;
   font-weight: 400;
 }
@@ -351,7 +360,8 @@ hr {
   color: black;
   text-align: center;
 }
-.created-grocery-list > ul {
+
+.created-grocery-list>ul {
   padding: 2px;
   list-style: none;
 }
@@ -370,26 +380,74 @@ hr {
   font-size: 20px;
   font-weight: 300;
 }
+
 .cap {
   text-transform: capitalize;
 }
 
+/* ======= Media queries for laptops ======= */
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+  .meals {
+    width: 450px;
+    height: 500px;
+  }
+
+  .grocery-list {
+    width: 450px;
+    height: 500px;
+  }
+
+  /* ===== How to styling */
+
+  .howTo {
+    height: 70%;
+  }
+
+  .close {
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+  }
+
+  .close:hover {
+    transform: scale(1.3, 1.3);
+    transition: transform 200ms ease-in-out;
+  }
+
+  .howTo>span {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .howTo>hr {
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  .howTo>p {
+    margin: auto;
+    font-size: 18px;
+    width: 70%;
+  }
+
+  /* End How to styling */
+}
+
 /* ======= Media queries bigger phones ======= */
 
-@media only screen and (min-height: 700px) and (max-height: 950px) {
+@media only screen and (min-width: 390px) and (max-width: 450px) {
   .main {
     margin-top: 0px;
-    /* border: rgb(255, 0, 0) dashed; */
     flex-direction: column;
     justify-content: center;
     padding: 20px;
   }
+
   .circles {
     height: 100vh;
-    /* border: dashed blue; */
   }
+
   .area {
-    /* border: green solid; */
     height: 100vh;
   }
 
@@ -418,6 +476,7 @@ hr {
     width: 90%;
     height: 50%;
   }
+
   .add-meal-modol {
     right: 10%;
     top: 10%;
@@ -461,17 +520,21 @@ hr {
 
     scroll-snap-align: start;
   }
-  .created-meals > p {
+
+  .created-meals>p {
     font-size: 20px;
     font-weight: 400;
   }
-  .created-meals > ul {
+
+  .created-meals>ul {
     font-size: 15px;
     font-weight: 300;
   }
+
   .remove-ingredient {
     font-size: 20px;
   }
+
   .clear-list {
     font-size: 20px;
     font-weight: 300;
@@ -496,21 +559,23 @@ hr {
     text-align: center;
     padding: 6px;
   }
-  .howTo > h1 {
+
+  .howTo>h1 {
     font-size: 25px;
   }
-  .howTo > span {
+
+  .howTo>span {
     position: absolute;
     top: 5px;
     right: 5px;
   }
 
-  .howTo > hr {
+  .howTo>hr {
     margin-top: 15px;
     margin-bottom: 15px;
   }
 
-  .howTo > p {
+  .howTo>p {
     margin: auto;
     font-size: 18px;
     width: 90%;
@@ -521,20 +586,19 @@ hr {
 
 /* Media queries smaller devices */
 
-@media only screen and (min-height: 300px) and (max-height: 750px) {
+@media only screen and (min-width: 150px) and (max-width: 389px) {
   .main {
     margin-top: 0px;
-    /* border: rgb(255, 0, 0) dashed; */
     flex-direction: column;
     justify-content: center;
     padding: 20px;
   }
+
   .circles {
     height: 100vh;
-    /* border: dashed blue; */
   }
+
   .area {
-    /* border: green solid; */
     height: 100vh;
   }
 
@@ -543,9 +607,10 @@ hr {
     height: 2.2rem;
   }
 
-  .add-subtract > p {
+  .add-subtract>p {
     font-size: 18px;
   }
+
   .add-subtract {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -576,6 +641,7 @@ hr {
     width: 90%;
     height: 60%;
   }
+
   .add-meal-modol {
     right: 10%;
     top: 10%;
@@ -604,7 +670,7 @@ hr {
     width: 150px;
   }
 
-  .add-item-form > .plus-sign {
+  .add-item-form>.plus-sign {
     font-size: 20px;
   }
 
@@ -612,12 +678,14 @@ hr {
     height: 25px;
     font-size: 15px;
   }
+
   .meal-section {
     width: 80%;
     height: 85%;
     margin-top: 5%;
   }
-  .meal-section > p {
+
+  .meal-section>p {
     font-size: 25px;
   }
 
@@ -632,17 +700,21 @@ hr {
 
     scroll-snap-align: start;
   }
-  .created-meals > p {
+
+  .created-meals>p {
     font-size: 15px;
     font-weight: 300;
   }
-  .created-meals > ul {
+
+  .created-meals>ul {
     font-size: 12px;
     font-weight: 300;
   }
+
   .remove-ingredient {
     font-size: 20px;
   }
+
   .clear-list {
     font-size: 20px;
     font-weight: 300;
@@ -667,22 +739,24 @@ hr {
     text-align: center;
     padding: 6px;
   }
-  .howTo > h1 {
+
+  .howTo>h1 {
     font-size: 20px;
   }
-  .howTo > span {
+
+  .howTo>span {
     position: absolute;
     top: 5px;
     right: 5px;
     font-size: 15px;
   }
 
-  .howTo > hr {
+  .howTo>hr {
     margin-top: 5px;
     margin-bottom: 10px;
   }
 
-  .howTo > p {
+  .howTo>p {
     margin: auto;
     font-size: 15px;
     width: 90%;

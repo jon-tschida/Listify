@@ -20,7 +20,10 @@ export default function App() {
   });
 
   const [totalGroceryList, setTotalGroceryList] = React.useState(() => {
-    let init = localStorage.getItem(`totalGroceryList`).split(",");
+    let init;
+    if (localStorage.getItem(`totalGroceryList`)) {
+      init = localStorage.getItem(`totalGroceryList`).split(",")
+    } else init = [];
     return init[0] === "" ? [] : init;
   });
 
