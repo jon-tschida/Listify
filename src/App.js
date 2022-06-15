@@ -6,10 +6,15 @@ import AddMeal from "./components/AddMeal";
 import HowTo from "./components/HowTo";
 
 export default function App() {
-
   //=================================
   //======== Setting state =========
-  const [isHelpOpen, setIsHelpOpen] = React.useState(false);
+  const [isHelpOpen, setIsHelpOpen] = React.useState(() => {
+    let init;
+    if (JSON.parse(localStorage.getItem("isHelpOpen")) === null) init = true;
+    else init = JSON.parse(localStorage.getItem("isHelpOpen"));
+    return init;
+  });
+
   const [isAddMealsOpen, setIsAddMealsOpen] = React.useState(false);
   const [ingredients, setIngredients] = React.useState([]);
   const [mealTitle, setMealTitle] = React.useState("");
@@ -25,7 +30,7 @@ export default function App() {
   const [totalGroceryList, setTotalGroceryList] = React.useState(() => {
     let init;
     if (localStorage.getItem(`totalGroceryList`)) {
-      init = localStorage.getItem(`totalGroceryList`).split(",")
+      init = localStorage.getItem(`totalGroceryList`).split(",");
     } else init = [];
     return init[0] === "" ? [] : init;
   });
@@ -49,6 +54,10 @@ export default function App() {
   React.useEffect(() => {
     localStorage.setItem(`totalGroceryList`, totalGroceryList);
   }, [totalGroceryList]);
+
+  React.useEffect(() => {
+    localStorage.setItem(`isHelpOpen`, isHelpOpen);
+  }, [isHelpOpen]);
   //=============================
 
   // remove Ingredients from the addMeal Modal when the Modal is closed

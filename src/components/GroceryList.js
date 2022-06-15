@@ -4,7 +4,8 @@ import Header from "./Header";
 export default function GroceryList(props) {
   const [openAddAnItem, setOpenAddAnItem] = React.useState(false);
 
-
+  /////////////
+  // Functions
   const handleDelete = (index) => {
     props.setTotalGroceryList((prevList) =>
       prevList.filter((_, i) => i !== index)
@@ -35,6 +36,15 @@ export default function GroceryList(props) {
   const handleEnableAddItem = () => setOpenAddAnItem((prevState) => !prevState);
 
   const handleClear = () => props.setTotalGroceryList([]);
+
+  async function copyTextToClipboard(text) {
+    if ("clipboard" in navigator) {
+      return await navigator.clipboard.writeText(text);
+    }
+  }
+
+  ////////////
+  // End functions
 
   // Clears add an item field when we add a new item via the form
   React.useEffect(() => {
@@ -98,12 +108,20 @@ export default function GroceryList(props) {
         </div>
         {props.totalGroceryList.length > 0 && (
           <div className="clear-list-container">
-            <div className="clear-list">Clear</div>
             <span
               className="material-symbols-outlined remove-ingredient"
               onClick={handleClear}
             >
               delete
+            </span>
+            <div className="clear-list">Clear</div>
+            ||
+            <div className="clear-list">Copy</div>
+            <span
+              className="material-symbols-outlined remove-ingredient"
+              onClick={() => copyTextToClipboard(props.totalGroceryList)}
+            >
+              content_copy
             </span>
           </div>
         )}

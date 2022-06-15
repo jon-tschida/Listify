@@ -16,6 +16,7 @@ export default function HowTo(props) {
         by adding the ingredients from your meals directly into the grocery
         list!
         <br />
+        <br />
         To get started, create a new a new meal by clicking the "+" sign in left
         box with the "Meals" title below. <br /> <br />
         This will open another section for you to create your meal. In this
@@ -28,6 +29,10 @@ export default function HowTo(props) {
         meals, and the ingredients will be added to your grocery list! No more
         thinking through your meals for the week and what you need to shop for,
         just Listify them!
+        <br />
+        <br />
+        All of your meals save from session to session, you only have to create
+        your meals once.
       </p>
     </div>
   );
