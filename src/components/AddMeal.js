@@ -4,16 +4,18 @@ export default function AddMeal(props) {
   const [clicked, setClicked] = React.useState(false);
 
   let { text, ingredients } = props.formData;
-  let { setIngredients, setFormData, setCreatedMeals, setMealTitle, mealTitle } = props
+  let {
+    setIngredients,
+    setFormData,
+    setCreatedMeals,
+    setMealTitle,
+    mealTitle,
+  } = props;
 
   React.useEffect(() => {
-
     if (text.length > 0) setMealTitle(text);
     if (ingredients.length > 0)
-      setIngredients((prevIngredients) => [
-        ...prevIngredients,
-        ingredients,
-      ]);
+      setIngredients((prevIngredients) => [...prevIngredients, ingredients]);
     setFormData({ text: "", ingredients: "" });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [clicked]);
@@ -35,9 +37,7 @@ export default function AddMeal(props) {
   };
 
   const handleDelete = (index) => {
-    setIngredients((prevIngred) =>
-      prevIngred.filter((_, i) => i !== index)
-    );
+    setIngredients((prevIngred) => prevIngred.filter((_, i) => i !== index));
   };
 
   const handleAddMeal = () => {
@@ -102,7 +102,7 @@ export default function AddMeal(props) {
         </div>
         <div>
           <div className="add-meal">
-            <p>Add Meal</p>
+            <p onClick={handleAddMeal}>Add Meal</p>
             <span
               className="material-symbols-outlined plus-sign"
               onClick={handleAddMeal}
@@ -110,7 +110,7 @@ export default function AddMeal(props) {
               add_circle
             </span>
           </div>
-          <hr />
+          <hr className="add-close-hr" />
           <div className="add-meal-close">
             <p>Close</p>
             <span
