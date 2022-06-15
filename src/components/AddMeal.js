@@ -3,14 +3,19 @@ import React from "react";
 export default function AddMeal(props) {
   const [clicked, setClicked] = React.useState(false);
 
+  let { text, ingredients } = props.formData;
+  let { setIngredients, setFormData, setCreatedMeals, setMealTitle, mealTitle } = props
+
   React.useEffect(() => {
-    if (props.formData.text.length > 0) props.setMealTitle(props.formData.text);
-    if (props.formData.ingredients.length > 0)
-      props.setIngredients((prevIngredients) => [
+
+    if (text.length > 0) setMealTitle(text);
+    if (ingredients.length > 0)
+      setIngredients((prevIngredients) => [
         ...prevIngredients,
-        props.formData.ingredients,
+        ingredients,
       ]);
-    props.setFormData({ text: "", ingredients: "" });
+    setFormData({ text: "", ingredients: "" });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [clicked]);
 
   const handleClick = (e) => {
@@ -21,7 +26,7 @@ export default function AddMeal(props) {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    props.setFormData((prevFormData) => {
+    setFormData((prevFormData) => {
       return {
         ...prevFormData,
         [name]: value,
@@ -30,15 +35,15 @@ export default function AddMeal(props) {
   };
 
   const handleDelete = (index) => {
-    props.setIngredients((prevIngred) =>
+    setIngredients((prevIngred) =>
       prevIngred.filter((_, i) => i !== index)
     );
   };
 
   const handleAddMeal = () => {
-    props.setCreatedMeals((prevCreatedMeal) => [
+    setCreatedMeals((prevCreatedMeal) => [
       ...prevCreatedMeal,
-      { mealTitle: props.mealTitle, ingredients: props.ingredients },
+      { mealTitle: mealTitle, ingredients: props.ingredients },
     ]);
   };
 

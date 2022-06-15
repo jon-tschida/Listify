@@ -4,6 +4,7 @@ import Header from "./Header";
 export default function GroceryList(props) {
   const [openAddAnItem, setOpenAddAnItem] = React.useState(false);
 
+
   const handleDelete = (index) => {
     props.setTotalGroceryList((prevList) =>
       prevList.filter((_, i) => i !== index)
@@ -38,6 +39,7 @@ export default function GroceryList(props) {
   // Clears add an item field when we add a new item via the form
   React.useEffect(() => {
     props.setNewItemForm({ newItem: "" });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.totalGroceryList]);
 
   return (

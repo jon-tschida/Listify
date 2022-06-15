@@ -6,6 +6,9 @@ import AddMeal from "./components/AddMeal";
 import HowTo from "./components/HowTo";
 
 export default function App() {
+
+  //=================================
+  //======== Setting state =========
   const [isHelpOpen, setIsHelpOpen] = React.useState(false);
   const [isAddMealsOpen, setIsAddMealsOpen] = React.useState(false);
   const [ingredients, setIngredients] = React.useState([]);
@@ -54,8 +57,8 @@ export default function App() {
     setMealTitle(``);
   }, [isAddMealsOpen, createdMeals]);
 
+  // ============================
   // Open help
-
   const openHelp = () => setIsHelpOpen((prevState) => !prevState);
 
   return (
