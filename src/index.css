@@ -292,8 +292,6 @@ hr {
   align-items: center;
 
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 0 24px;
 }
 
 .created-meals {
