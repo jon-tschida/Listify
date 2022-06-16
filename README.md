@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+## Listify
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Languages and Techonologies
 
-## Available Scripts
+- React 18
+- CSS
 
-In the project directory, you can run:
+### About
 
-### `npm start`
+Listify was made to make creating grocery lists easier. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get started, create a new a new meal by clicking the "+" sign in left box with the "Meals" title. This will open another section for you to create your meal. In this area, you can give your meal a title and ingredients. Once you have your meal titled and ingredients added, click the "Add meal" to add it to your meal lists.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Now that you have some meals created, just click or tap any of the meals, and the ingredients will be added to your grocery list!
 
-### `npm test`
+No more thinking through your meals for the week and what you need to shop for, just Listify them!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Purpose for creating:
 
-### `npm run build`
+This was my second React project to date, it was quite a bit more ambitious than I initially thought it would be. But the whole goal of this application was to solve I problem I had, creating grocery lists.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### What I learned:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+There was a considerable amount of state to keep track of, but I kept the majority of state in the "App" level, so we have one source of truth and then it can be passed down to children components. I learned quite a bit on the importance of detailed state variable names, it can get confusing quick! 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This really helped strengthen my understanding of conditional rendering, I hadn't utilized modals in past projets too much, so creating an app where forms were popping in and out depening on user interation was a new experience, but I do feel like this is my first, truly interactive web app, I'm quite proud of it! 
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Also, we learned quite a bit more about how to utilize the higher order function `map()` to render out state in different ways in components. This wasn't a new concept, but it felt good to solidify that knowledge! 
