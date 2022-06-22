@@ -18,7 +18,7 @@ export default function Meals(props) {
     <div className="meals">
       <Header content={"Meals"} css={"boxes-header"} />
       <div className="add-subtract">
-        <p>Add a meal </p>
+        <p onClick={handleClick}>Add a meal </p>
         <span
           className="material-symbols-outlined plus-sign"
           onClick={handleClick}
@@ -35,7 +35,7 @@ export default function Meals(props) {
                 onClick={() => handleMealClick(i)}
                 key={i}
               >
-                <p>{el.mealTitle}</p>
+                <p className="cap">{el.mealTitle}</p>
                 <hr />
                 {el.ingredients.map((ingredient, index) => {
                   return (

@@ -112,7 +112,7 @@ export default function AddMeal(props) {
           </div>
           <hr className="add-close-hr" />
           <div className="add-meal-close">
-            <p>Close</p>
+            <p onClick={handleClose}>Close</p>
             <span
               className="material-symbols-outlined plus-sign"
               onClick={handleClose}

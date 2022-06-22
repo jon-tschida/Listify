@@ -47,18 +47,18 @@ hr {
   transition: transform 200ms ease-in-out;
 }
 
-.howTo>span {
+.howTo > span {
   position: absolute;
   top: 15px;
   right: 15px;
 }
 
-.howTo>hr {
+.howTo > hr {
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-.howTo>p {
+.howTo > p {
   margin: auto;
   font-size: 20px;
   width: 70%;
@@ -117,9 +117,10 @@ hr {
   user-select: none;
 }
 
-.add-subtract>p {
+.add-subtract > p {
   font-size: 25px;
   padding: 5px;
+  cursor: pointer;
 }
 
 .plus-sign {
@@ -204,7 +205,7 @@ hr {
   color: black;
 }
 
-.meal-section>p {
+.meal-section > p {
   text-align: center;
   font-size: 35px;
 }
@@ -225,7 +226,7 @@ hr {
   font-size: 20px;
 }
 
-.ingredients-list>li {
+.ingredients-list > li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -248,7 +249,7 @@ hr {
   flex-direction: column;
 }
 
-.test>span {
+.test > span {
   text-align: center;
 }
 
@@ -263,7 +264,7 @@ hr {
   padding-top: 10px;
 }
 
-.add-meal>p {
+.add-meal > p {
   font-weight: 300;
   font-size: 25px;
   cursor: pointer;
@@ -277,6 +278,10 @@ hr {
   color: black;
   z-index: 100;
   text-align: center;
+}
+
+.add-meal-close > p {
+  cursor: pointer;
 }
 
 .created-meals-list-container {
@@ -317,14 +322,14 @@ hr {
   transition: transform 250ms ease-in-out;
 }
 
-.created-meals>ul {
+.created-meals > ul {
   list-style: none;
   padding: 1px;
   font-size: 30px;
   font-weight: 300;
 }
 
-.created-meals>p {
+.created-meals > p {
   font-size: 35px;
   font-weight: 400;
 }
@@ -363,7 +368,7 @@ hr {
   text-align: center;
 }
 
-.created-grocery-list>ul {
+.created-grocery-list > ul {
   padding: 2px;
   list-style: none;
 }
@@ -417,18 +422,18 @@ hr {
     transition: transform 200ms ease-in-out;
   }
 
-  .howTo>span {
+  .howTo > span {
     position: absolute;
     top: 15px;
     right: 15px;
   }
 
-  .howTo>hr {
+  .howTo > hr {
     margin-top: 5px;
     margin-bottom: 15px;
   }
 
-  .howTo>p {
+  .howTo > p {
     margin: auto;
     font-size: 18px;
     width: 70%;
@@ -533,12 +538,12 @@ hr {
     scroll-snap-align: center;
   }
 
-  .created-meals>p {
+  .created-meals > p {
     font-size: 20px;
     font-weight: 400;
   }
 
-  .created-meals>ul {
+  .created-meals > ul {
     font-size: 15px;
     font-weight: 300;
   }
@@ -572,22 +577,22 @@ hr {
     padding: 6px;
   }
 
-  .howTo>h1 {
+  .howTo > h1 {
     font-size: 25px;
   }
 
-  .howTo>span {
+  .howTo > span {
     position: absolute;
     top: 5px;
     right: 5px;
   }
 
-  .howTo>hr {
+  .howTo > hr {
     margin-top: 15px;
     margin-bottom: 15px;
   }
 
-  .howTo>p {
+  .howTo > p {
     margin: auto;
     font-size: 18px;
     width: 90%;
@@ -619,7 +624,7 @@ hr {
     height: 2.2rem;
   }
 
-  .add-subtract>p {
+  .add-subtract > p {
     font-size: 18px;
   }
 
@@ -682,7 +687,7 @@ hr {
     width: 150px;
   }
 
-  .add-item-form>.plus-sign {
+  .add-item-form > .plus-sign {
     font-size: 20px;
   }
 
@@ -697,7 +702,7 @@ hr {
     margin-top: 5%;
   }
 
-  .meal-section>p {
+  .meal-section > p {
     font-size: 25px;
   }
 
@@ -713,12 +718,12 @@ hr {
     scroll-snap-align: center;
   }
 
-  .created-meals>p {
+  .created-meals > p {
     font-size: 15px;
     font-weight: 300;
   }
 
-  .created-meals>ul {
+  .created-meals > ul {
     font-size: 12px;
     font-weight: 300;
   }
@@ -752,23 +757,23 @@ hr {
     padding: 6px;
   }
 
-  .howTo>h1 {
+  .howTo > h1 {
     font-size: 20px;
   }
 
-  .howTo>span {
+  .howTo > span {
     position: absolute;
     top: 5px;
     right: 5px;
     font-size: 18px;
   }
 
-  .howTo>hr {
+  .howTo > hr {
     margin-top: 5px;
     margin-bottom: 10px;
   }
 
-  .howTo>p {
+  .howTo > p {
     margin: auto;
     font-size: 15px;
     width: 90%;

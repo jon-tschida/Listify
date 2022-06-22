@@ -57,7 +57,7 @@ export default function GroceryList(props) {
       <div className="grocery-list">
         <Header content={"Grocery list"} css={"boxes-header"} />
         <div className="add-subtract">
-          <p>Add an item </p>
+          <p onClick={handleEnableAddItem}>Add an item </p>
           <span
             className="material-symbols-outlined plus-sign"
             onClick={handleEnableAddItem}
