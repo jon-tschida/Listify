@@ -29,7 +29,7 @@ export default function Meals(props) {
       <div className="created-meals-list-container">
         {props.createdMeals.map((el, i) => {
           return (
-            <div className="test">
+            <div className="test" key={i}>
               <div
                 className="created-meals"
                 onClick={() => handleMealClick(i)}
