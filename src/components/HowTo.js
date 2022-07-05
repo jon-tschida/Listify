@@ -18,17 +18,20 @@ export default function HowTo(props) {
         <br />
         <br />
         To get started, create a new a new meal by clicking the "+" sign in left
-        box with the "Meals" title below. <br /> <br />
+        box with the "Meals" title. <br /> <br />
         This will open another section for you to create your meal. In this
         area, you can give your meal a title and ingredients. Once you have your
-        meal titled and ingredients added, click the "Add meal" to add it to
+        meal titled and ingredients added, click "Add meal" to add it to
         your meal lists.
         <br />
         <br />
-        Now that you have some meals created, just click or tap any of the
+        Once you have some meals created, just click or tap any of the
         meals, and the ingredients will be added to your grocery list! No more
         thinking through your meals for the week and what you need to shop for,
         just Listify them!
+        <br />
+        <br />
+        Need to add just a few, individual items to the list? Just click the "Add an item" button in the "Grocery list" menu to add individual items.
         <br />
         <br />
         All of your meals save from session to session, you only have to create
