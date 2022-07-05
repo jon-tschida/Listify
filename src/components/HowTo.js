@@ -21,7 +21,7 @@ export default function HowTo(props) {
         box with the "Meals" title. <br /> <br />
         This will open another section for you to create your meal. In this
         area, you can give your meal a title and ingredients. Once you have your
-        meal titled and ingredients added, click "Add meal" to add it to
+        meal titled and ingredients added, click "Complete Meal" to add it to
         your meal lists.
         <br />
         <br />
@@ -36,6 +36,9 @@ export default function HowTo(props) {
         <br />
         All of your meals save from session to session, you only have to create
         your meals once.
+        <br />
+        <br />
+        (This can be opened anytime from the "?" icon in the top left)
       </p>
     </div>
   );

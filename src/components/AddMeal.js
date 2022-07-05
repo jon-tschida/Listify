@@ -41,12 +41,13 @@ export default function AddMeal(props) {
   };
 
   const handleAddMeal = () => {
+    if (props.ingredients.length > 0) {
     setCreatedMeals((prevCreatedMeal) => [
       ...prevCreatedMeal,
       { mealTitle: mealTitle, ingredients: props.ingredients },
     ]);
+  }
   };
-
   const handleSubmit = (e) => e.preventDefault();
 
   const handleClose = () => props.setIsAddMealsOpen((prevState) => !prevState);
@@ -102,7 +103,7 @@ export default function AddMeal(props) {
         </div>
         <div>
           <div className="add-meal">
-            <p onClick={handleAddMeal}>Add Meal</p>
+            <p onClick={handleAddMeal}>Complete Meal</p>
             <span
               className="material-symbols-outlined plus-sign"
               onClick={handleAddMeal}
